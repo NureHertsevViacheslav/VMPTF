@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Guess number (1-100)"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/guessInput"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:inputType="number"
+        android:hint="Enter your guess" />
+
+    <Button
+        android:id="@+id/submitButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        android:layout_marginTop="8dp" />
+
+    <TextView
+        android:id="@+id/gameLog"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="Game Log"
+        android:paddingTop="16dp"
+        android:scrollbars="vertical" />
+
+    <TextView
+        android:id="@+id/leaderboard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Leaderboard"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:padding="8dp"
+        /><TextView
+    android:id="@+id/leaderboardView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Leaderboard"
+    android:padding="8dp"
+    android:textSize="16sp"
+    android:layout_marginTop="16dp" />
+
+</LinearLayout>
