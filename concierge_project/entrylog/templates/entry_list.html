@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Visitor Log</title>
+</head>
+<body>
+    <h2>Visitor Log</h2>
+    <p>Hello, {{ user.username }}! (<a href="{% url 'logout' %}">Logout</a>)</p>
+    <a href="{% url 'add_entry' %}">Add New Entry</a>
+
+    <ul>
+        {% for entry in entries %}
+            <li>
+                {{ entry.full_name }} - Entered: {{ entry.entered_at }}
+                {% if entry.exited_at %}
+                    , Exited: {{ entry.exited_at }}
+                {% else %}
+                    <a href="{% url 'mark_exit' entry.pk %}">Mark Exit</a>
+                {% endif %}
+            </li>
+        {% empty %}
+            <li>No entries yet.</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
